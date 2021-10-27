@@ -1,0 +1,303 @@
+/* =====================================
+  Base Element Styles -- Mobile First
+===================================== */
+
+* {
+    font-size: 18px;
+    line-height: 1.3;
+}
+body {
+    font-family: 'Inter', 'Work Sans', sans-serif;
+    text-align: center;
+    background-color: #E6FDFF;
+    color: black;
+    margin: 0;
+
+}
+header {
+    padding: 40px;
+    margin: 0;
+    background-color: #F8F9FA;
+}
+nav {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+div {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: #44355B;
+}
+a:visited {
+    color: #72727E;
+}
+
+/* ---- Headings ---- */
+
+h1 {
+    padding-bottom: 5px;
+    margin: 0;
+    font-size: 2rem;
+}
+h2 {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+h3 {
+    padding: 7px 0;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+/* ---- Sections ---- */
+
+img {
+    max-width: 90%;
+}
+p {
+    padding: 10px 40px 60px 40px;
+}
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.profile {
+    width: 70%;
+    padding-top: 10px;
+}
+.box {
+    padding: 4px;
+    margin: 4px 0;
+    background-color: #BBBDF6;
+    text-align: center;
+}
+.main {
+    font-family: 'Work Sans', sans-serif;
+    background-color: #2E4052;
+    color: #F9F9F9;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+}
+.item {
+    margin: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* --- Skills Section --- */
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+}
+.competency {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 70%;
+    padding: 10px 10%;
+}
+.logo {
+    max-width: 20%;
+    align-self: center;
+    padding: auto;
+}
+.logo-para{
+    max-width: 60%px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+
+/* --- Contact --- */
+
+.contact {
+    padding: 15px 40px 40px 40px;
+    margin-bottom: 0;
+    background-color: #F8F9FA;
+}
+.last {
+    padding: 0% 10px 30px;
+    margin: 0;
+}
+
+/* --- Footer --- */
+
+footer {
+    padding: 25px 15px;
+    border-top: solid darkgray 1px;
+    background-color: #BBBDF6;
+}
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: bold;
+}
+.name {
+    text-transform: capitalize;
+}
+.tablet {
+    display: none;
+}
+
+
+/* =====================================
+    Media Queries -- Tablet Layout
+===================================== */
+
+@media (min-width: 768px) {
+
+    * {
+        font-size: 20px;
+    }
+    header {
+        background-color: #BBBDF6;
+    }
+    nav {
+        background-color: #BBBDF6; 
+    }
+    a:hover {
+        text-decoration: underline;
+    } 
+    
+    /* --- Name and Navigation line --- */
+
+    h1, nav, .para, .profile{
+        padding: 10px 20px;
+    }
+    h1 {
+        text-align: center;
+    }
+    .menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center; /* aligns the menu with the center of the page */
+    }
+    .box {
+        padding: 4px 0 4px 16px;
+        margin: 0;
+        background: transparent;
+        vertical-align: bottom;
+        text-align: right;
+    }
+
+    /* --- Profile portion of the webpage --- */
+    
+    .main {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+    }
+    .profile {
+        width: 150vh;
+    }
+    .para {
+        text-align: left;
+        margin-top: 0;
+    }
+
+    /* --- Portfolio section with flexboxes --- */
+
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .about {
+        max-width: 50%;
+    }
+
+    /* --- Skills Section --- */
+
+    .competency {
+        width: 80%;
+        padding: 10px;
+        align-self: center;
+    }
+    .logo {
+        max-width: 10%;
+    }
+    .logo-para{
+        max-width: 50%;
+    }
+
+    /* --- Contact and Footer area --- */
+
+    footer {
+        padding: 25px 15px;
+        border-top: solid darkgray 1px;
+        background-color: #BBBDF6;
+    }
+    .mobile {
+        display: none;
+    }
+    .tablet {
+        display: contents;
+    }
+    .push {
+        margin-left: auto; /* sets the nav in the footer to the right */
+    }
+    .footer {
+        padding-bottom: 40px;
+    }
+}
+
+
+/* =====================================
+    Media Queries -- Browser Layout
+===================================== */
+
+@media (min-width: 1024px) {
+
+    /* --- Name and Navigation line --- */
+
+    header {
+        display: flex; /* makes the h1 and menu items into flex boxes */
+        flex-direction: row; /* makes a horizontal layout */
+        align-items: flex-end; /* aligns h1 and menu texts content to the bottom */
+        justify-content: space-between; /* keeps space between h1 and menu with screen size adjustments */
+        padding: 0;
+    }
+    h1, nav, .para, .profile{
+        padding: 10px 20px;
+    }
+    h1 {
+        text-align: left;
+    }
+    .menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end; /* aligns the menu with the right side of the page */
+    }
+    .box {
+        padding: 4px 0 4px 16px;
+        margin: 0;
+        background: none;
+        vertical-align: bottom;
+        text-align: right;
+    }
+
+    /* --- Portfolio section with flexboxes --- */
+
+    .about {
+        max-width: 33.3%;
+    }
+
+    /* --- Contact and Footer area --- */
+
+    .mobile {
+        display: none;
+    }
+    .push {
+        margin-left: auto;
+    }
+}
